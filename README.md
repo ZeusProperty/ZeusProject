@@ -27,6 +27,6 @@
 ```
 ## github
 ```
-git@github.com:tz198849/ZeusProperty.git
-...123456
+https://github.com/ZeusProperty
+git@github.com:ZeusProperty/ZeusProject.git
 ```
