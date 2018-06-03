@@ -4,18 +4,19 @@ export default {
   namespace: 'testPage',
 
   state: {
+    a: '333',
     testData: [1,2,3],
   },
 
   effects: {
-    *testType({ payload }, { call, put }) {
-      const response = yield call(getTestData)
-      console.log('response==================>>>>>', response)
-      yield put({
-        type: 'testReducers',
-        payload: response,
-      })
-    },
+    // *testType({ payload }, { call, put }) {
+    //   const response = yield call(getTestData)
+    //   console.log('response==================>>>>>', response)
+    //   yield put({
+    //     type: 'testReducers',
+    //     payload: response,
+    //   })
+    // },
     *getHubData({ payload }, { call, put }) {
       const response = yield call(testGitHubNewAddress)
       console.log('testGitHubNewAddress', response)
@@ -26,7 +27,8 @@ export default {
     testReducers(state, action) {
       console.log(state, action)
       return {
-        ...state,
+        a: '333',
+        testData: [1,2,3],
         testData: action.payload,
       };
     },

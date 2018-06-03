@@ -98,7 +98,7 @@ export default class GlobalHeader extends PureComponent {
           onClick={this.toggle}
         />
         <div className={styles.right}>
-          <HeaderSearch
+          {/* <HeaderSearch
             className={`${styles.action} ${styles.search}`}
             placeholder="站内搜索"
             dataSource={['搜索提示一', '搜索提示二', '搜索提示三']}
@@ -108,11 +108,11 @@ export default class GlobalHeader extends PureComponent {
             onPressEnter={value => {
               console.log('enter', value); // eslint-disable-line
             }}
-          />
-          <Tooltip title="使用文档">
+          /> */}
+          <Tooltip title="帮助中心">
             <a
               target="_blank"
-              href="http://pro.ant.design/docs/getting-started"
+              href="javascript:;" // http://pro.ant.design/docs/getting-started
               rel="noopener noreferrer"
               className={styles.action}
             >
@@ -136,12 +136,12 @@ export default class GlobalHeader extends PureComponent {
               emptyText="你已查看所有通知"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
             />
-            <NoticeIcon.Tab
+            {/* <NoticeIcon.Tab
               list={noticeData['消息']}
               title="消息"
               emptyText="您已读完所有消息"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
-            />
+            /> */}
             <NoticeIcon.Tab
               list={noticeData['待办']}
               title="待办"

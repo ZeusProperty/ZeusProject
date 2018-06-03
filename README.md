@@ -8,6 +8,8 @@
 ├── src
 │   ├── assets               # 本地静态资源
 │   ├── common               # 应用公用配置，如导航信息
+|       └── menu.js          # 配置菜单导航信息
+|       └── router.js        # 配置页面路由的
 │   ├── components           # 业务通用组件
 │   ├── e2e                  # 集成测试用例
 │   ├── layouts              # 通用布局

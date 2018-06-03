@@ -69,6 +69,9 @@ function getFlatMenuData(menus) {
 
 export const getRouterData = app => {
   const routerConfig = {
+    '/propertyManagement/zeusProperty': {
+      component: dynamicWrapper(app, ['zeusProperty'], () => import('../routes/PropertyManagement/ZeusProperty')),
+    },
     '/': {
       component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     },

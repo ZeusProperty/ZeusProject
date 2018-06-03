@@ -9,9 +9,9 @@ import { Button } from 'antd';
 }))
 export default class TestPage extends Component {
   componentDidMount() {
-    this.props.dispatch({
-      type: 'testPage/testType',
-    })
+    // this.props.dispatch({
+    //   type: 'testPage/testType',
+    // })
     this.props.dispatch({
       type: 'testPage/getHubData'
     })
@@ -20,10 +20,11 @@ export default class TestPage extends Component {
     console.log(this.props.testPage)
     this.props.dispatch({
       type: 'testPage/testReducers',
-      payload: ['this', 'is', 'test'],
+      payload: ['this', 'is', 'test', '2222'],
     });
   }
   render() {
+    console.log('this.props.testPage', this.props.testPage)
     return (
       <PageHeaderLayout>
         <div className={styles.testClass}>this is test page!~</div>
@@ -35,7 +36,7 @@ export default class TestPage extends Component {
             }
           })
         }}>测试是否有权限登录</Button>
-        <Button onClick={this.testDispatch}>测试 dispatch</Button>
+        <Button onClick={this.testDispatch}>测试 dispatch{this.props.testPage.testData[0]}</Button>
       </PageHeaderLayout>
     );
   }

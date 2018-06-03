@@ -2,6 +2,17 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
+    name: '资产管理',
+    icon: 'dashboard',
+    path: 'propertyManagement',
+    children : [
+      {
+        name: '资产管理',
+        path: 'zeusProperty',
+      },
+    ],
+  },
+  {
     name: 'dashboard',
     icon: 'dashboard',
     path: 'dashboard',

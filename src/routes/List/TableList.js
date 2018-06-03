@@ -389,6 +389,8 @@ export default class TableList extends PureComponent {
       handleModalVisible: this.handleModalVisible,
     };
 
+    console.log('这个data', data)
+
     return (
       <PageHeaderLayout title="查询表格">
         <Card bordered={false}>
