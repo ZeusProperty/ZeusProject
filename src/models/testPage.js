@@ -1,4 +1,4 @@
-import { getTestData } from '../services/testPage';
+import { getTestData, testGitHubNewAddress } from '../services/testPage';
 
 export default {
   namespace: 'testPage',
@@ -15,6 +15,10 @@ export default {
         type: 'testReducers',
         payload: response,
       })
+    },
+    *getHubData({ payload }, { call, put }) {
+      const response = yield call(testGitHubNewAddress)
+      console.log('testGitHubNewAddress', response)
     },
   },
 

@@ -12,6 +12,9 @@ export default class TestPage extends Component {
     this.props.dispatch({
       type: 'testPage/testType',
     })
+    this.props.dispatch({
+      type: 'testPage/getHubData'
+    })
   }
   testDispatch = (e) => {
     console.log(this.props.testPage)
