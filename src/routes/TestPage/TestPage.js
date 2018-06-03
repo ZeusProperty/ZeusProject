@@ -4,8 +4,22 @@ import { connect } from 'dva';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import { Button } from 'antd';
 
-@connect()
+@connect(({ testPage }) => ({
+  testPage,
+}))
 export default class TestPage extends Component {
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'testPage/testType',
+    })
+  }
+  testDispatch = (e) => {
+    console.log(this.props.testPage)
+    this.props.dispatch({
+      type: 'testPage/testReducers',
+      payload: ['this', 'is', 'test'],
+    });
+  }
   render() {
     return (
       <PageHeaderLayout>
@@ -18,6 +32,7 @@ export default class TestPage extends Component {
             }
           })
         }}>测试是否有权限登录</Button>
+        <Button onClick={this.testDispatch}>测试 dispatch</Button>
       </PageHeaderLayout>
     );
   }

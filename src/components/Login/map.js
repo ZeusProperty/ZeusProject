@@ -8,7 +8,7 @@ const map = {
     props: {
       size: 'large',
       prefix: <Icon type="user" className={styles.prefixIcon} />,
-      placeholder: 'admin',
+      placeholder: 'Please enter username!',
     },
     rules: [
       {
@@ -23,7 +23,7 @@ const map = {
       size: 'large',
       prefix: <Icon type="lock" className={styles.prefixIcon} />,
       type: 'password',
-      placeholder: '888888',
+      placeholder: 'Please enter password!',
     },
     rules: [
       {
