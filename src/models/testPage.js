@@ -19,7 +19,8 @@ export default {
     // },
     *getHubData({ payload }, { call, put }) {
       const response = yield call(testGitHubNewAddress)
-      console.log('testGitHubNewAddress', response)
+      console.log('testGitHubNewAddress1', response)
+      console.log('testGitHubNewAddress2', response)
     },
   },
 

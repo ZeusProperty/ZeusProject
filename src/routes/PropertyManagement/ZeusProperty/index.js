@@ -43,6 +43,30 @@ export default class ZeusProperty extends PureComponent {
     selectedRows: [],
     formValues: {},
   };
+  handleSearch = e => {
+    e.preventDefault();
+
+    const { dispatch, form } = this.props;
+
+    form.validateFields((err, fieldsValue) => {
+      if (err) return;
+
+      const values = {
+        ...fieldsValue,
+      };
+
+      this.setState({
+        formValues: values,
+      }, () => {
+        console.log(this.state.formValues)
+      });
+
+      // dispatch({
+      //   type: 'rule/fetch',
+      //   payload: values,
+      // });
+    });
+  };
   handleModalVisible = flag => {
     this.setState({
       modalVisible: !!flag,
@@ -64,17 +88,17 @@ export default class ZeusProperty extends PureComponent {
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="资产编号">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('zcbh')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="财务编号">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('cwbh')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="现使用人">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('xsyr')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
@@ -106,22 +130,22 @@ export default class ZeusProperty extends PureComponent {
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="资产编号">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('zcbh')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="财务编号">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('cwbh')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="现使用人">
-              {getFieldDecorator('no')(<Input placeholder="请输入" />)}
+              {getFieldDecorator('xsyr')(<Input placeholder="请输入" />)}
             </FormItem>
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="使用状态">
-              {getFieldDecorator('status')(
+              {getFieldDecorator('syzt')(
                 <Select placeholder="请选择" style={{ width: '100%' }}>
                   <Option value="0">闲置</Option>
                   <Option value="1">使用中</Option>
@@ -140,7 +164,7 @@ export default class ZeusProperty extends PureComponent {
           </Col>
           <Col md={mdSm.md} sm={mdSm.sm}>
             <FormItem label="使用状态">
-              {getFieldDecorator('status')(
+              {getFieldDecorator('status1')(
                 <Select placeholder="请选择" style={{ width: '100%' }}>
                   <Option value="0">闲置</Option>
                   <Option value="1">使用中</Option>
