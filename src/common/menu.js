@@ -5,7 +5,7 @@ const menuData = [
     name: '资产管理',
     icon: 'dashboard',
     path: 'propertyManagement',
-    children : [
+    children: [
       {
         name: '资产管理',
         path: 'zeusProperty',

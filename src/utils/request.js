@@ -43,7 +43,7 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
-  console.log('url================>>>>>>>>>>>', url)
+  console.log('url================>>>>>>>>>>>', url);
 
   const defaultOptions = {
     credentials: 'include',

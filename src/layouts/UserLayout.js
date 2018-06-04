@@ -54,7 +54,7 @@ class UserLayout extends React.PureComponent {
                   <span className={styles.title}>Zues Property</span>
                 </Link>
               </div>
-              <div className={styles.desc}></div>
+              <div className={styles.desc} />
             </div>
             <Switch>
               {getRoutes(match.path, routerData).map(item => (

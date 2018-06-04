@@ -55,11 +55,14 @@ export default class ZeusProperty extends PureComponent {
         ...fieldsValue,
       };
 
-      this.setState({
-        formValues: values,
-      }, () => {
-        console.log(this.state.formValues)
-      });
+      this.setState(
+        {
+          formValues: values,
+        },
+        () => {
+          console.log(this.state.formValues);
+        }
+      );
 
       // dispatch({
       //   type: 'rule/fetch',

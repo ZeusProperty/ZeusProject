@@ -5,7 +5,7 @@ export default {
 
   state: {
     loading: false,
-    data: [1,2,3],
+    data: [1, 2, 3],
   },
 
   effects: {

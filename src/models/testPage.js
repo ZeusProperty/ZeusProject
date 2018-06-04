@@ -5,7 +5,7 @@ export default {
 
   state: {
     a: '333',
-    testData: [1,2,3],
+    testData: [1, 2, 3],
   },
 
   effects: {
@@ -18,23 +18,23 @@ export default {
     //   })
     // },
     *getAccountAdmin({ payload }, { call, put }) {
-      console.log('payload==>>')
-      const response = yield call(loginAccountAdmin)
-      console.log('用户登陆了', response)
+      console.log('payload==>>');
+      const response = yield call(loginAccountAdmin);
+      console.log('用户登陆了', response);
     },
     *getHubData({ payload }, { call, put }) {
-      const response = yield call(testGitHubNewAddress)
-      console.log('testGitHubNewAddress1', response)
-      console.log('testGitHubNewAddress2', response)
+      const response = yield call(testGitHubNewAddress);
+      console.log('testGitHubNewAddress1', response);
+      console.log('testGitHubNewAddress2', response);
     },
   },
 
   reducers: {
     testReducers(state, action) {
-      console.log(state, action)
+      console.log(state, action);
       return {
         a: '333',
-        testData: [1,2,3],
+        testData: [1, 2, 3],
         testData: action.payload,
       };
     },

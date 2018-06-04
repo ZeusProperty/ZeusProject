@@ -141,7 +141,7 @@ const proxy = {
   'POST /Property/adminlogin': 'http://192.168.14.102:9527',
 };
 
-export default (noProxy ? { '/Property/*' : SERVICE_URL } : delay(proxy, 1000));
+export default (noProxy ? { '/Property/*': SERVICE_URL } : delay(proxy, 1000));
 
 // 将所有以/api/开头的GET和POST请求全部直接转发至 http://xxx.com
 // export default {
