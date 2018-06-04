@@ -9,7 +9,7 @@ import { format, delay } from 'roadhog-api-doc';
 
 // 是否禁用代理
 const noProxy = process.env.NO_PROXY === 'true';
-console.log('process.env.NO_PROXY ==>>', process.env.NO_PROXY)
+console.log('process.env.NO_PROXY ==>>', process.env.NO_PROXY);
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
@@ -140,3 +140,9 @@ const proxy = {
 };
 
 export default (noProxy ? {} : delay(proxy, 1000));
+
+// 将所有以/api/开头的GET和POST请求全部直接转发至 http://xxx.com
+// export default {
+//   'GET /api/*': 'http://xxx.com',
+//   'POST /api/*': 'http://xxx.com',
+// }
