@@ -42,7 +42,7 @@ export default class ZeusProperty extends PureComponent {
     expandForm: false,
     selectedRows: [],
     formValues: {},
-  }
+  };
   handleModalVisible = flag => {
     this.setState({
       modalVisible: !!flag,
@@ -58,7 +58,7 @@ export default class ZeusProperty extends PureComponent {
     const mdSm = {
       md: 6,
       sm: 24,
-    }
+    };
     return (
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
@@ -100,7 +100,7 @@ export default class ZeusProperty extends PureComponent {
     const mdSm = {
       md: 6,
       sm: 24,
-    }
+    };
     return (
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 8, lg: 24, xl: 48 }}>
@@ -252,7 +252,15 @@ export default class ZeusProperty extends PureComponent {
         title: '操作',
         dataIndex: 'op',
         render: (text, record, index) => {
-          return <a onClick={() => { console.log('审批通过', record.financeNumber) }}>审批</a>
+          return (
+            <a
+              onClick={() => {
+                console.log('审批通过', record.financeNumber);
+              }}
+            >
+              审批
+            </a>
+          );
         },
       },
     ];
@@ -264,33 +272,36 @@ export default class ZeusProperty extends PureComponent {
       </Menu>
     );
     const data = {
-      list: [{
-        key: 1,
-        propertyNumber: 123,
-        financeNumber: 'CW00001',
-        money: 1122,
-        date: 'terwewq',
-        currentStatus: '0',
-        location: '办公室',
-        owner: 'is me',
-        bm: '学习部',
-      },{
-        key: 2,
-        propertyNumber: 123,
-        financeNumber: 'CW00001',
-        money: 1122,
-        date: 'terwewq',
-        currentStatus: '1',
-        location: '办公室',
-        owner: 'is me',
-        bm: '学习部',
-      }],
+      list: [
+        {
+          key: 1,
+          propertyNumber: 123,
+          financeNumber: 'CW00001',
+          money: 1122,
+          date: 'terwewq',
+          currentStatus: '0',
+          location: '办公室',
+          owner: 'is me',
+          bm: '学习部',
+        },
+        {
+          key: 2,
+          propertyNumber: 123,
+          financeNumber: 'CW00001',
+          money: 1122,
+          date: 'terwewq',
+          currentStatus: '1',
+          location: '办公室',
+          owner: 'is me',
+          bm: '学习部',
+        },
+      ],
       pagination: {
         current: 1,
         pageSize: 20,
         total: 1,
-      }
-    }
+      },
+    };
 
     return (
       <PageHeaderLayout title="资产管理">
@@ -324,6 +335,6 @@ export default class ZeusProperty extends PureComponent {
         </Card>
         {/* <CreateForm {...parentMethods} modalVisible={modalVisible} /> */}
       </PageHeaderLayout>
-    )
+    );
   }
 }

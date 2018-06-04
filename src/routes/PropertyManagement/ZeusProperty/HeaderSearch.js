@@ -34,7 +34,7 @@ export const renderSimpleForm = () => {
       </Row>
     </Form>
   );
-}
+};
 
 export const renderAdvancedForm = () => {
   const { getFieldDecorator } = this.props.form;
@@ -106,4 +106,4 @@ export const renderAdvancedForm = () => {
       </div>
     </Form>
   );
-}
+};
