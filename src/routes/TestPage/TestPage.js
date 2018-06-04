@@ -22,6 +22,14 @@ export default class TestPage extends Component {
       type: 'testPage/testReducers',
       payload: ['this', 'is', 'test', '2222'],
     });
+    // test acco
+    this.props.dispatch({
+      type: 'testPage/getAccountAdmin',
+      payload: {
+        userName: 'xiewenxiu',
+        pw: '666666',
+      },
+    })
   }
   render() {
     console.log('this.props.testPage', this.props.testPage)

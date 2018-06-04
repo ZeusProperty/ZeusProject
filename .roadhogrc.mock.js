@@ -11,7 +11,7 @@ import { format, delay } from 'roadhog-api-doc';
 const noProxy = process.env.NO_PROXY === 'true';
 
 // 服务器地址
-const SERVICE_URL = 'https://api.github.com/';
+const SERVICE_URL = 'http://192.168.14.102:9527';
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
@@ -138,10 +138,10 @@ const proxy = {
       path: '/base/category/list',
     });
   },
-  'GET /users/octocat/gists': () => {},
+  'POST /Property/adminlogin': 'http://192.168.14.102:9527',
 };
 
-export default (noProxy ? { '/users/*' : SERVICE_URL } : delay(proxy, 1000));
+export default (noProxy ? { '/Property/*' : SERVICE_URL } : delay(proxy, 1000));
 
 // 将所有以/api/开头的GET和POST请求全部直接转发至 http://xxx.com
 // export default {

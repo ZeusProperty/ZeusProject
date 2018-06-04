@@ -1,4 +1,4 @@
-import { getTestData, testGitHubNewAddress } from '../services/testPage';
+import { getTestData, testGitHubNewAddress, loginAccountAdmin } from '../services/testPage';
 
 export default {
   namespace: 'testPage',
@@ -17,6 +17,11 @@ export default {
     //     payload: response,
     //   })
     // },
+    *getAccountAdmin({ payload }, { call, put }) {
+      console.log('payload==>>')
+      const response = yield call(loginAccountAdmin)
+      console.log('用户登陆了', response)
+    },
     *getHubData({ payload }, { call, put }) {
       const response = yield call(testGitHubNewAddress)
       console.log('testGitHubNewAddress1', response)
