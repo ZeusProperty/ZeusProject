@@ -14,6 +14,7 @@ export default {
     *login({ payload }, { call, put }) {
       console.log('models page ==>>>', payload, fakeAccountLogin);
       const response = yield call(fakeAccountLogin, payload);
+      console.log('models page 2==>>', response)
       yield put({
         type: 'changeLoginStatus',
         payload: response,
