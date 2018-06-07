@@ -11,7 +11,7 @@ import { format, delay } from 'roadhog-api-doc';
 const noProxy = process.env.NO_PROXY === 'true';
 
 // 服务器地址
-const SERVICE_URL = 'http://192.168.14.102:9527';
+const SERVICE_URL = 'http://43.243.139.243:42292';
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
@@ -138,7 +138,7 @@ const proxy = {
       path: '/base/category/list',
     });
   },
-  'POST /Property/adminlogin': 'http://192.168.14.102:9527',
+  'POST /Property/adminlogin': 'http://43.243.139.243:42292',
 };
 
 export default (noProxy ? { '/Property/*': SERVICE_URL } : delay(proxy, 1000));
